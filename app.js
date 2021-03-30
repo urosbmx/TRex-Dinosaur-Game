@@ -53,9 +53,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     function generateObstacle(){
         let randomTime = Math.random()*4000;
-        let obstaclePosition = 1500;
+        let obstaclePosition = window.innerWidth;
         let scoree = 0;
-
         const obstacle = document.createElement('div');
        if(!endOfGame) obstacle.classList.add('obstacle');
         grid.appendChild(obstacle);
