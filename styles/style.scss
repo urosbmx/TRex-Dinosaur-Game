@@ -8,6 +8,8 @@ background-size: contain;
 font-family: 'Press Start 2P', cursive;
 color: $font-color;
 user-select: none;
+
+
 }
 
 
@@ -64,3 +66,12 @@ background-image: url(/media/t-rex-background.png);
     background-repeat: no-repeat;
     cursor: pointer;
 }
+
+@keyframes MOVE-BG {
+    from {
+      transform: translateX(0);
+    }
+    to { 
+      transform: translateX(-187%);
+    }
+ }

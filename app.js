@@ -4,18 +4,22 @@ document.addEventListener('DOMContentLoaded',()=>{
     const dino = document.querySelector('.dino');
     const grid = document.querySelector('.grid');
     const alert = document.getElementById('alert');
-    const score = document.querySelector('.score');
+    const scores = document.querySelector('.score');
     let isJumping = false;
     let gravity = 0.9;
     let endOfGame = false;
+    let secundes = -1;
+
+   
     
     function control (e){
         if(e.keyCode === 32){
             if(!isJumping){
                 isJumping = true;
                 jump();
+               
             }
-
+        
             
         }
     }
@@ -49,7 +53,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 
         },20)
     }
- 
 
     function generateObstacle(){
         let randomTime = Math.random()*4000;
@@ -59,10 +62,14 @@ document.addEventListener('DOMContentLoaded',()=>{
        if(!endOfGame) obstacle.classList.add('obstacle');
         grid.appendChild(obstacle);
         obstacle.style.left = obstaclePosition + 'px'; 
+      
         let timerID = setInterval(function(){
             //code
             if(obstaclePosition > 0 && obstaclePosition < 60 && position < 60){
                 clearInterval(timerID);
+
+                
+                
                 alert.innerHTML = `
                 GAME OVER
                 <div class="reset" onclick="window.location.reload();"></div>
@@ -71,15 +78,20 @@ document.addEventListener('DOMContentLoaded',()=>{
                 endOfGame = true;
                 document.querySelector('.dino').style.background = "url('/media/dead-rex.png')";
                 document.querySelector('.dino').style.backgroundSize ="cover";
+
                 
             }
-            // scoree +=1;
-            // score.innerHTML = scoree;
-
             obstaclePosition -=10
             obstacle.style.left = obstaclePosition + 'px';}
              ,20)
       if(!endOfGame) (setTimeout(generateObstacle,randomTime));
+    
+    
+
+       
+
+
+  
     }
 
 
@@ -88,6 +100,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     function resert(){
         window.location.reload();
     }
+
+
+    function score(){
+        secundes ++;
+        scores.innerHTML = 'SCORE   ' + secundes;
+  }
 
 
 
