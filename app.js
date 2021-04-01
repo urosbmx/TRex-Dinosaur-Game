@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 `
                 
                 endOfGame = true;
-                document.querySelector('.dino').style.background = "url('/media/dead-rex.png')";
+                document.querySelector('.dino').style.background = "url('https://urosbmx.github.io/TRex-Dinosaur-Game/media/dead-rex.png')";
                 document.querySelector('.dino').style.backgroundSize ="cover";
 
                 
