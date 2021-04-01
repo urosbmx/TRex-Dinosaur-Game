@@ -1,7 +1,7 @@
 body {
   overflow: hidden;
   background-color: fafafa;
-  background-image: url(/media/backCloud.png);
+  background-image: url("./media/backCloud.png");
   background-size: contain;
   font-family: 'Press Start 2P', cursive;
   color: #4e4e4e;
@@ -16,7 +16,7 @@ body {
   height: 60px;
   position: absolute;
   bottom: 0px;
-  background-image: url(/media/t-rex.png);
+  background-image: url("./media/t-rex.pn");
 }
 
 .grid {
@@ -26,14 +26,14 @@ body {
   background-position: 20px -3px;
   position: absolute;
   bottom: 0;
-  background-image: url(/media/t-rex-background.png);
+  background-image: url("./media/t-rex-background.png");
 }
 
 .obstacle {
   position: absolute;
   width: 60px;
   height: 60px;
-  background-image: url(/media/cacti.png);
+  background-image: url("./media/cacti.png");
   bottom: 0px;
 }
 
@@ -51,12 +51,34 @@ body {
 }
 
 .reset {
-  background-image: url(/media/reset.png);
+  background-image: url("./media/reset.png");
   height: 40px;
   width: 40px;
   margin: 0 auto;
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+
+@-webkit-keyframes MOVE-BG {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-187%);
+            transform: translateX(-187%);
+  }
+}
+
+@keyframes MOVE-BG {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-187%);
+            transform: translateX(-187%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
